@@ -1,0 +1,15 @@
+# Setup Wizard Configuration
+# 设置向导参数配置
+
+params:
+  - id: tz
+    type: string
+    name: "timezone"
+    description: "Timezone for the application (e.g., Asia/Shanghai, America/New_York)"
+    default_value: "Asia/Shanghai"
+
+locales:
+  zh:
+    tz:
+      name: "时区"
+      description: "应用程序使用的时区（如：Asia/Shanghai、America/New_York）"
