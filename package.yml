@@ -1,0 +1,16 @@
+package: community.lazycat.app.halowebui
+version: 1.0.0
+name: HaloWebUI
+description: "基于 Open WebUI 深度定制，原生集成 Anthropic Claude / Google Gemini / xAI Grok，内置 HaloClaw 消息网关，一站式管理你的所有大模型。"
+license: MIT
+homepage: https://github.com/ztx888/halowebui
+author: ztx888
+min_os_version: 1.5.0
+
+locales:
+  en:
+    name: "HaloWebUI"
+    description: "HaloWebUI is a deeply customized version of Open WebUI with Claude, Gemini, Grok, and the HaloClaw message gateway."
+  zh:
+    name: "HaloWebUI"
+    description: "基于 Open WebUI 深度定制，原生集成 Anthropic Claude / Google Gemini / xAI Grok，内置 HaloClaw 消息网关，一站式管理你的所有大模型。"

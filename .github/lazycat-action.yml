@@ -1,0 +1,42 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/community.lazycat.app.halowebui.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: git
+
+build:
+  toolchains: []
+  run_buildscript: false
+
+images:
+  - id: halowebui
+    target: service
+    service: halowebui-app
+    source: ghcr.io/ztx888/halowebui
+    channel: custom
+    sort: created
+    tag_regex: '^latest$'
+    delivery:
+      mode: mirror
+      require_digest_match: true
+
+stores:
+  official:
+    enabled: false
+    skip_if_version_exists: false
+    retry:
+      enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: HaloWebUI
+    summary: Published from GitHub Actions
